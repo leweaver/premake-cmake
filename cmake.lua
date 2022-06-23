@@ -40,7 +40,7 @@ function cmake.cfgname(cfg)
     local cfgname = cfg.buildcfg
     if cmake.workspace.multiplePlatforms then
         -- CMake breaks if "|" is used here
-        cfgname = string.format("%s-%s", cfg.platform, cfg.buildcfg)
+        cfgname = string.format("%s_%s", cfg.platform, cfg.buildcfg)
     end
     return cfgname
 end
